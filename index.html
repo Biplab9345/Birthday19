@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sayantika's Magical Birthday</title>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-image: url(SL-111019-24830-46.jpg);
+      background-size: cover;
+      background-position: center;
+      color: #4b2e83;
+      overflow-x: hidden;
+      position: relative;
+    }
+    #custom-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      opacity: 0.1;
+      z-index: -2;
+    }
+    header {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem;
+      color: #ff2e63;
+    }
+    header h1 {
+      font-size: 4rem;
+      background: #fff0f8;
+      padding: 1rem 2rem;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
+    }
+    header p {
+      font-size: 2rem;
+      margin-top: 1rem;
+      color: #00f74e;
+      font-style: italic;
+      font-weight: 800;
+    }
+    .letter {
+      max-width: 900px;
+      margin: auto;
+      background: #ffe0f8;
+      border-radius: 30px;
+      padding: 3rem;
+      text-align: center;
+      box-shadow: 0 0 30px rgba(255, 182, 193, 0.5);
+    }
+    .letter h2 {
+      font-size: 2.5rem;
+      color: #a21caf;
+    }
+    .letter p {
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      padding: bottom -20px;;
+      font-size: 1.2rem;
+      color: #4b2e83;
+      line-height: 1.8;
+    }
+    .surprise-btn, .secret-btn {
+      margin-top: 2rem;
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      color: white;
+      padding: 1rem 1rem;
+      margin-left: 10px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .surprise-btn:hover, .secret-btn:hover {
+      transform: scale(1.1);
+      background: linear-gradient(to right, #e84393, #d63031);
+    }
+    .magic {
+      display: none;
+      margin-top: 2rem;
+      animation: fadeIn 2s ease-in forwards;
+    }
+    .magic img {
+      width: 90px;
+      margin: 10px;
+      animation: floaty 4s ease-in-out infinite;
+    }
+    .magic p {
+      font-size: 1.4rem;
+      margin-top: 1rem;
+      color: #d6336c;
+    }
+    #secretMessage {
+      display: none;
+      margin-top: 2rem;
+      font-size: 1.4rem;
+      color: #6a0572;
+      background: #fff0fa;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(220, 20, 60, 0.3);
+    }
+    @keyframes floaty {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .balloons {
+      position: fixed;
+      bottom: -100px;
+      left: 50%;
+      width: 50px;
+      height: 100px;
+      background: url('https://img.icons8.com/emoji/96/balloon.png') no-repeat center;
+      background-size: contain;
+      animation: balloonFloat 8s infinite ease-in;
+    }
+    @keyframes balloonFloat {
+      0% { transform: translate(-50%, 0); }
+      100% { transform: translate(-50%, -150vh); }
+    }
+      footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #ffc0cb;
+      color: #fff;
+      font-weight: bold;
+      overflow: hidden;
+      height: 40px;
+    }
+
+    .scroll-text {
+      display: inline-block;
+      white-space: nowrap;
+      padding-left: 100%;
+      animation: scroll-left 25s linear infinite; /* slowed down */
+      font-size: 1.2em;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="custom-bg"></div>
+  <header>
+    <h1>🎉 Happy Birthday Sayantika 🎉</h1>
+    <p>Many Many Happy Returns of The Day ✨</p>
+  </header>
+
+  <section class="letter">
+    <h2>Some Words📝🖊</h2>
+    <p>Sayantika,</p>
+    <p>I don't know why I am that much obsessed with you,why i want you to be a part of my life altough it's impossible,but really i love to talk with you very very much i smile every moment to the opposite side of the screen when i talk with you🎶</p>
+    <p>On your special day, I wish all your dreams come true. Altough i may not stay with you that time but always hope you get the best🌌</p>
+    <p>— From someone who quietly cherishes you 🌺</p>
+    <button class="surprise-btn" onclick="showMagic()">Click on it 🎁</button>
+    <div class="magic" id="magicBox">
+      <img src="Pink-birthday-cake-with-cream-and-candles-and-cherries-on-top-removebg-preview.png" alt="Cake" />
+      <img src="images__1_-removebg-preview.png" alt="Chocolate" />
+      <img src="images__2_-removebg-preview.png" alt="Rose" />
+      <img src="images__3_-removebg-preview.png" alt="Balloon" />
+      <img src="https://img.icons8.com/emoji/96/heart-with-ribbon.png" alt="Heart Gift" />
+      <p>✨ May this day bring a thousand smiles to you ✨</p>
+    </div>
+
+    <button class="secret-btn" onclick="revealMessage()">Tap for a Message📩</button>
+    <div id="secretMessage">
+     I know maybe i am not that much important for you but you are one of the most important person for me,that's why i come every time again and again after all of those humiliation and insult.But it really hurts when someone you love tells those kind of things,but who cares.I don't know when,but i will move away ,just like you want.Just hoping this will not irritate but if it do then "Sorry".Enjoy your day.
+     <br><br>কথা গুলো একটু নেকা হয়েগেলো যদিও😅 
+     <br><br>শুভ জন্মদিন বুড়ি🌼🌺🎂🥳
+    </div>
+  </section>
+
+  <div class="balloons"></div>
+
+ <footer>
+    <div class="scroll-text">🎉 Happy Birthday Sayantika!  🎂 Happy Birthday Sayantika! 🎉  Happy Birthday Sayantika! 🎈  🎉 Happy Birthday Sayantika!  🎂 Happy Birthday Sayantika!  🎉 Happy Birthday Sayantika! </div>
+  </footer>
+
+  <audio autoplay loop>
+    <source src="WhatsApp Audio 2025-06-18 at 23.13.04_54f8ac3e.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    function showMagic() {
+      document.getElementById('magicBox').style.display = 'block';
+    }
+    function revealMessage() {
+      document.getElementById('secretMessage').style.display = 'block';
+    }
+    // Dynamically add a background image
+    document.getElementById('custom-bg').style.backgroundImage = "url('/mnt/data/A_birthday_digital_photograph_collage_features_Say.png')";
+  </script>
+</body>
+</html>
